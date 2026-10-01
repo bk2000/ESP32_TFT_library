@@ -1,0 +1,18 @@
+menu "LED Blink Configuration"
+
+config BLINK_GPIO
+    int "LED GPIO number"
+    range 0 33
+    default 2
+    help
+        GPIO number the LED is connected to.
+        Many ESP32 dev boards have an on-board LED on GPIO 2.
+
+config BLINK_PERIOD_MS
+    int "Blink period (ms)"
+    range 10 10000
+    default 500
+    help
+        Time in milliseconds the LED stays on, and then off.
+
+endmenu
